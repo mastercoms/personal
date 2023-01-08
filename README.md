@@ -1,3 +1,3 @@
 # mcoms personal website
 
-My personal website and blog!
+My personal website, portfolio and blog!
