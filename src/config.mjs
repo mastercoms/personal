@@ -3,13 +3,13 @@ import defaultImage from './assets/images/default.png';
 const CONFIG = {
   name: 'mcoms',
 
-  origin: 'https://mastercoms.com',
+  origin: 'https://mcoms.dev',
   basePathname: '/',
   trailingSlash: false,
 
   title: 'mcoms',
   description:
-    "I've always been enchanted by computers, even when I was little, and now I'm a professional software engineer and open source maintainer interested in games, web, HPC, and more!",
+    "I've always been enchanted by computers, even when I was little, and now I'm a professional software engineer and open source maintainer interested in games, web, and high performance computing.",
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
