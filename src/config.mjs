@@ -8,8 +8,7 @@ const CONFIG = {
   trailingSlash: false,
 
   title: 'mcoms',
-  description:
-    "I've always been enchanted by computers ever since I was little, and now I'm a professional software engineer and open source maintainer interested in games, web, and high performance computing.",
+  description: "Hi, I'm mastercoms and I love to code! I'm a professional software engineer and open source maintainer. Visit my website to learn more and check out my blog for all sorts of interesting tech and personal content!",
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
