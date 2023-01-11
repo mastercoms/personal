@@ -9,7 +9,7 @@ const CONFIG = {
 
   title: 'mcoms',
   description:
-    "I've always been enchanted by computers, even when I was little, and now I'm a professional software engineer and open source maintainer interested in games, web, and high performance computing.",
+    "I've always been enchanted by computers ever since I was little, and now I'm a professional software engineer and open source maintainer interested in games, web, and high performance computing.",
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
