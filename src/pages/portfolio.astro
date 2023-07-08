@@ -1,6 +1,7 @@
 ---
 import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
+import { getHomePermalink } from '~/utils/permalinks';
 
 const meta = {
   title: SITE.title,
@@ -10,5 +11,13 @@ const meta = {
 ---
 
 <Layout {meta}>
-  <p>WIP</p>
+  <section class="flex items-center h-full p-16">
+    <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+      <div class="text-center">
+        <h2 class="mb-8 font-bold text-7xl">Under construction</h2>
+        <p class="mb-8 text-3xl font-semibold md:text-3xl">This site is a work in progress, pardon the incompleteness!</p>
+        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">Go back home</a>
+      </div>
+    </div>
+  </section>
 </Layout>
