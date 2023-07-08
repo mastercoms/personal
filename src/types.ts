@@ -26,6 +26,22 @@ export interface Post {
   readingTime?: number;
 }
 
+export interface Project {
+  id: string;
+  slug: string;
+  
+  title: string;
+  description?: string;
+  
+  image?: string;
+
+  canonical?: string | URL;
+  permalink?: string;
+
+  Content: AstroComponentFactory;
+  content?: string;
+}
+
 export interface MetaSEO {
   title?: string;
   description?: string;

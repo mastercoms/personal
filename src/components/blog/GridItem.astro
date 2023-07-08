@@ -1,6 +1,4 @@
 ---
-import { Picture } from '@astrojs/image/components';
-
 import { BLOG } from '~/config.mjs';
 import type { Post } from '~/types';
 
@@ -15,7 +13,7 @@ const { post } = Astro.props;
 
 <article class="mb-6 transition">
   <div>
-    <a href="#" class="inline-block">
+    <a href={getPermalink(post.category, 'category')} class="inline-block">
       <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800">{post.category}</span>
     </a>
   </div>
