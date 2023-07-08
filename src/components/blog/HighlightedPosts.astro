@@ -21,7 +21,7 @@ const {
 const posts = await findLatestPosts({});
 ---
 
-<section class="px-4 py-4 mx-auto max-w-6xl">
+<section class="px-4 py-4 mx-auto max-w-8xl">
   <div class="flex flex-col lg:justify-between lg:flex-row mb-8">
     <div class="md:max-w-sm">
       {
@@ -35,7 +35,7 @@ const posts = await findLatestPosts({});
       {
         allPostsText && allPostsLink && (
           <a
-            class="text-gray-500 dark:text-slate-400 hover:text-primary-800 transition ease-in duration-200 block mb-6 md:mb-0"
+            class="text-muted dark:text-slate-400 hover:text-primary transition ease-in duration-200 block mb-6 md:mb-0"
             href={allPostsLink}
           >
             {allPostsText} »
@@ -44,7 +44,7 @@ const posts = await findLatestPosts({});
       }
     </div>
 
-    {information && <p class="text-gray-700 dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
+    {information && <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
   </div>
 
   <Grid posts={posts} />

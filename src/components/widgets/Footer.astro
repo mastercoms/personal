@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 import { getHomePermalink, getPermalink } from '~/utils/permalinks';
 
 const links = [
@@ -58,7 +58,7 @@ const social = [
 ];
 ---
 
-<footer class="border-t border-gray-200 dark:border-slate-800">
+<footer class="relative border-t border-gray-200 dark:border-slate-800 not-prose">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
       <div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
