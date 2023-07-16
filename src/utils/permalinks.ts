@@ -25,6 +25,7 @@ export const POST_PERMALINK_PATTERN = trimSlash(BLOG?.post?.permalink || '/%slug
 export const BLOG_BASE = cleanSlug(BLOG?.list?.pathname);
 export const CATEGORY_BASE = cleanSlug(BLOG?.category?.pathname || 'category');
 export const TAG_BASE = cleanSlug(BLOG?.tag?.pathname) || 'tag';
+export const PORTFOLIO_BASE = cleanSlug('portfolio');
 
 /** */
 export const getCanonical = (path = ''): string | URL => {
@@ -52,7 +53,11 @@ export const getPermalink = (slug = '', type = 'page'): string => {
       break;
 
     case 'post':
-      permalink = createPath(trimSlash(slug));
+      permalink = createPath(BLOG_BASE, trimSlash(slug));
+      break;
+
+    case 'project':
+      permalink = createPath(PORTFOLIO_BASE, trimSlash(slug));
       break;
 
     case 'page':

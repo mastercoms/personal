@@ -3,46 +3,45 @@ import { SITE, BLOG } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
+import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
 
 import { fetchPosts } from '~/utils/blog';
-import { TAG_BASE } from '~/utils/permalinks';
-import Headline from '~/components/blog/Headline.astro';
 
 export async function getStaticPaths({ paginate }) {
-  if (BLOG?.disabled || BLOG?.tag?.disabled) return [];
+  if (BLOG?.disabled || BLOG?.category?.disabled) return [];
 
   const posts = await fetchPosts();
-  const tags = new Set();
+  const categories = new Set();
   posts.map((post) => {
-    Array.isArray(post.tags) && post.tags.map((tag) => tags.add(tag.toLowerCase()));
+    typeof post.category === 'string' && categories.add(post.category.toLowerCase());
   });
 
-  return Array.from(tags).map((tag: string) =>
+  return Array.from(categories).map((category: string) =>
     paginate(
-      posts.filter((post) => Array.isArray(post.tags) && post.tags.find((elem) => elem.toLowerCase() === tag)),
+      posts.filter((post) => typeof post.category === 'string' && category === post.category.toLowerCase()),
       {
-        params: { tag: tag, blog: TAG_BASE || undefined },
+        params: { category: category },
         pageSize: BLOG.postsPerPage,
-        props: { tag },
+        props: { category },
       }
     )
   );
 }
 
-const { page, tag } = Astro.props;
+const { page, category } = Astro.props;
 
 const currentPage = page.currentPage ?? 1;
 const meta = {
-  title: `Posts by tag '${tag}'${currentPage > 1 ? ` — Page ${currentPage} ` : ''}`,
+  title: `Category'${category}' ${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
   description: SITE.description,
-  noindex: BLOG?.tag?.noindex,
+  noindex: BLOG?.category?.noindex,
 };
 ---
 
 <Layout meta={meta}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline>Tag: {tag}</Headline>
+    <Headline><span class="capitalize">{category.replaceAll('-', ' ')}</span></Headline>
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>

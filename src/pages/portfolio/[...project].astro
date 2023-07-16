@@ -1,0 +1,36 @@
+---
+import { BLOG } from '~/config.mjs';
+
+import Layout from '~/layouts/PageLayout.astro';
+import SinglePost from '~/components/blog/SinglePost.astro';
+import ToBlogLink from '~/components/blog/ToBlogLink.astro';
+
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+import { fetchProjects } from '~/utils/portfolio';
+
+export async function getStaticPaths() {
+  if (BLOG?.disabled || BLOG?.post?.disabled) return [];
+  return (await fetchProjects()).map((post) => ({
+    params: {
+      project: post.permalink,
+    },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const url = getCanonical(getPermalink(post.permalink, 'post'));
+
+const meta = {
+  title: post.title,
+  description: post.description,
+  canonical: post.canonical || url,
+  noindex: BLOG?.post?.noindex,
+  ogType: 'article',
+};
+---
+
+<Layout {meta}>
+  <SinglePost post={{ ...post }} url={url} />
+  <ToBlogLink />
+</Layout>
