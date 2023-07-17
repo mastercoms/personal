@@ -9,7 +9,7 @@ const CONFIG = {
 
   title: 'mcoms',
   description: "Hi, I'm mastercoms and I love to code! I'm a professional software engineer and open source maintainer. Visit my website to learn more and check out my blog for all sorts of interesting tech and personal content!",
-  defaultImage: defaultImage,
+  defaultImage: undefined,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
