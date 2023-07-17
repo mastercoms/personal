@@ -43,7 +43,7 @@ binds, weapon preferences for crosshairs and effects. The core of the config als
 functionality and optimizations much beyond any other config by clever use of internal functionality and undocumented
 behavior of the game and its engine. And even more, mastercomfig became a project to optimize and improve the game
 itself. To date, there have been dozens of changes from mastercomfig included by Valve into the live game, going back to
-2020 and some of them as recent as 2023. These patches touch into various exploit patches, fixes for the automated
+2020 and some of them as recent as 2023. These updates touch into various exploit patches, fixes for the automated
 cheater bots that have plagued TF2 for a few years, and performance improvements! And an even a greater set of patches
 submitted at Valve's request is on the way! There's large engine optimizations and huge gameplay fixes being reviewed.
 
