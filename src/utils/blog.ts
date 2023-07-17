@@ -59,6 +59,8 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     Content: Content,
     // or 'body' in case you consume from API
 
+    is_project: false,
+
     permalink: await generatePermalink({ id, slug, publishDate, category }),
 
     readingTime: remarkPluginFrontmatter?.readingTime,

@@ -29,6 +29,8 @@ const getNormalizedProject = async (project: CollectionEntry<'portfolio'>): Prom
 
     Content: Content,
 
+    is_project: true,
+
     permalink: await generatePermalink({ id, slug }),
   };
 };

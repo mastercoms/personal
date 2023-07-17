@@ -1,6 +1,7 @@
 ---
 title: Glowstone
 description: Open-source Minecraft server software.
+image: ~/assets/images/portfolio/glowstone.png
 ---
 
 ## About
@@ -38,9 +39,9 @@ and work.
 
 ## Experience
 
-It would be an understatement to say that I learned a lot on this journey. I think my most valuable experience on
-Glowstone was the open-source and social aspect of it. It taught me valuable things about code review, planning,
-leadership and community.
+It would be an understatement to say that there was a wealth of knowledge on this journey. I think my most valuable
+experience on Glowstone was the open-source and social aspect of it. It taught me valuable things about code review,
+planning, leadership and community.
 
 As for the technical experience, I certainly learned a lot about Java. Here's a neat list of things:
 
@@ -66,5 +67,6 @@ And through implementation, I learned a lot of general game development concepts
 - Perlin noise
 - Procedural world generation
 - Loot tables
-- API guarantees
-- and more, WIP
+- API contracts and guarantees
+- Serialization
+- Modding

@@ -1,6 +1,7 @@
 ---
 title: mastercomfig
 description: A game optimization project and mod focused on Team Fortress 2.
+image: ~/assets/images/portfolio/mastercomfig.png
 ---
 
 ## About
@@ -71,11 +72,11 @@ And on the mastercomfig web app side, I certainly learned a lot of new tricks:
 - Modern web app features: flexbox, lazy loading, hydration
 - PWAs: filesystem APIs, notifications, offline support
 
-Finally, mastercomfig is a community as much as it is a technical project. I learned a lot not only from an open-source
-maintainership angle, but also from a more casual aspect with moderating its Discord server. I not only focused on
-efforts to keep the community safe and friendly through bot configuration and diligent moderation, but also making it a
-fun place for people to interact about not just mastercomfig or even just TF2. Now, it feels like a big community which
-chats about really anything, with quality conversations, lots of fun hang out sessions and game nights, as well as neat
-events we do throughout the year. It's really the first time I managed a public community like this, and I have much to
-thank gdude for his work on the Glowstone community, which I learned from, as well as the patient communities who
-tolerated the many mistakes I made managing other, more specialized communities, like my MMORPG Minecraft server.
+Finally, mastercomfig is a community as much as it is a technical project. I learned from an open-source maintainership
+perspective, as well as a more casual aspect with moderating its Discord server. I both focused on efforts to keep the
+community safe and friendly through bot configuration and diligent moderation, and also making it a fun place for people
+to interact about not just mastercomfig or even just TF2. Now, it feels like a big community which chats about really
+anything, with quality conversations, lots of fun hang out sessions and game nights, as well as neat events we do
+throughout the year. It's really the first time I managed a public community like this, and I have much to thank gdude
+for his work on the Glowstone community, which I learned from, as well as the patient communities who tolerated the many
+mistakes I made managing other, more specialized communities, like my MMORPG Minecraft server.

@@ -24,6 +24,8 @@ export interface Post {
   content?: string;
 
   readingTime?: number;
+
+  is_project?: boolean;
 }
 
 export interface Project {
@@ -40,6 +42,8 @@ export interface Project {
 
   Content: AstroComponentFactory;
   content?: string;
+
+  is_project?: boolean;
 }
 
 export interface MetaSEO {

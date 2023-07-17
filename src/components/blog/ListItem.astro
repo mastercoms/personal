@@ -17,7 +17,7 @@ export interface Props {
 const { post } = Astro.props;
 const image = await findImage(post.image);
 
-const link = !BLOG?.post?.disabled ? getPermalink(post.permalink, 'post') : '';
+const link = !BLOG?.post?.disabled ? getPermalink(post.permalink, post.is_project ? 'project' : 'post') : '';
 ---
 
 <article class={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 ${image ? 'md:grid-cols-2' : ''}`}>
@@ -45,8 +45,11 @@ const link = !BLOG?.post?.disabled ? getPermalink(post.permalink, 'post') : '';
     <header>
       <div class="mb-1">
         <span class="text-sm">
+          {
+          post.publishDate && (
           <Icon name="tabler:clock" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
           <time datetime={String(post.publishDate)}>{getFormattedDate(post.publishDate)}</time>
+          )}
           {
             post.category && (
               <>
@@ -73,7 +76,7 @@ const link = !BLOG?.post?.disabled ? getPermalink(post.permalink, 'post') : '';
       </h2>
     </header>
 
-    {post.excerpt && <p class="flex-grow text-muted dark:text-slate-400 text-lg">{post.excerpt}</p>}
+    {(post.excerpt ?? post.description) && <p class="flex-grow text-muted dark:text-slate-400 text-lg">{post.excerpt ?? post.description}</p>}
     <footer class="mt-5">
       <PostTags tags={post.tags} />
     </footer>
