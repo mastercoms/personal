@@ -1,8 +1,8 @@
 ---
 publishDate: 2023-01-08T00:00:00Z
 title: Wrangling with UE4 Dynamic Atmospheric Lighting
-description: Lorem ipsum dolor sit amet
-excerpt: Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas
+description: How to take your dynamic lighting to the next level in Unreal Engine 4
+excerpt: Custom UE4 dynamic lighting
 category: Unreal Engine
 tags:
   - rendering
@@ -11,7 +11,13 @@ tags:
   - cpp
 ---
 
-Unreal Engine is quite well known for its impressive
-dynamic lighting features, but to push UE4 to its limit,
-I had to make quite a few custom changes to rendering
-to get it working juuust riiight.
+Our story begins, as always in engineering, with a problem. It had been a few years since we decided on a statically
+built lighting scheme for Project Borealis, after using an IBL-based technique with dynamic lighting (which we showed
+off in Updated 5). The IBL technique was great when it worked, but it had a lot of issues with artist control and it was
+not intuitive. The artists were requesting we be able to do incredibly complex scenes with many different moving parts
+that was basically impossible to do with static lighting, and they were also not satisfied with the functionality or
+speed of the recent GPU lightmass feature in UE4, which was not fast enough to do real-time iteration yet.
+
+Luckily, NVIDIA recently released DDGI, which was a raytracing framework for dynamic lighting in UE4, and there was our
+answer. It supported baking the raytracing results, and of course you could see them in real-time in editor too. It was
+perfect. But of course, we still needed to take it a step further, due to our fairly unique scene.

@@ -1,8 +1,8 @@
 ---
-publishDate: 2023-01-08T00:00:00Z
+publishDate: 2023-04-14T00:00:00Z
 title: Unreal Engine 4.27 Optimization Guide
-description: Lorem ipsum dolor sit amet
-excerpt: Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas
+description: A guide on how to squeeze out the most performance you can from Unreal Engine
+excerpt: Squeeze out perf in Unreal Engine 4!
 category: Unreal Engine
 tags:
   - performance
@@ -10,6 +10,6 @@ tags:
   - cpp
 ---
 
-Unreal Engine 4 is great out of the box, but there's
-quite a handful of optimizations I've had to do
-in order to get the performance I want.
+Unreal Engine 4 is a great engine. It does a lot, and is coded pretty well. It's pretty optimized for what it does.
+However, it does do _a lot_, for a lot of different types of games, so it's unlikely Epic has custom made every single
+system to suite your exact needs. In this tutorial, we'll be going over how I optimized a classic, linear FPS game.
