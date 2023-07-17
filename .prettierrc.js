@@ -6,6 +6,7 @@ module.exports = {
   tabWidth: 2,
   trailingComma: 'es5',
   useTabs: false,
+  proseWrap: "always",
 
   plugins: [require.resolve('prettier-plugin-astro')],
 

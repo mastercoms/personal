@@ -1,5 +1,7 @@
 ---
 import type { Project } from '~/types';
+import { findImage } from '~/utils/images';
+import { Picture } from '@astrojs/image/components';
 
 import { getPermalink } from '~/utils/permalinks';
 
@@ -8,12 +10,25 @@ export interface Props {
 }
 
 const { project } = Astro.props;
+
+const image = await findImage(`~/assets/images/portfolio/${project.slug}.png`)
 ---
 
 <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
   <a href={getPermalink(project.permalink, 'project')} class="text-2xl font-semibold hover:text-primary dark:hover:text-blue-700  transition ease-in duration-200">
     <div class="flex-shrink-0">
-        <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
+      {image && (
+        <Picture
+          src={image}
+          class="h-48 w-full object-cover"
+          widths={[400, 900]}
+          sizes="(max-width: 900px) 400px, 900px"
+          alt={project.title}
+          aspectRatio="16:9"
+          loading="lazy"
+          decoding="async"
+        />
+      )}
     </div>
     <div class="flex flex-1 flex-col justify-center bg-gray-100 dark:bg-neutral-900 p-6 text-center">
       <div class="flex-1">{project.title}</div>
