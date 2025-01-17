@@ -1,8 +1,8 @@
 ---
 import Grid from '~/components/blog/Grid.astro';
 
-import { getBlogPermalink } from '~/utils/permalinks';
 import { findLatestPosts } from '~/utils/blog';
+import { getBlogPermalink } from '~/utils/permalinks';
 
 export interface Props {
   title?: string;
@@ -21,6 +21,7 @@ const {
 const posts = await findLatestPosts({});
 ---
 
+{!!posts.length && (
 <section class="px-4 py-4 mx-auto max-w-6xl">
   <div class="flex flex-col lg:justify-between lg:flex-row mb-8">
     <div class="md:max-w-sm">
@@ -49,3 +50,4 @@ const posts = await findLatestPosts({});
 
   <Grid posts={posts} />
 </section>
+)}

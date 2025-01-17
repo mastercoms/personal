@@ -12,15 +12,14 @@ const meta = {
 <Layout {meta}>
   <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
     <h2 class="text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none group font-heading mb-2">Contact me</h2>
-    <p class="max-w-lg text-center text-xl font-medium text-gray-500 mb-8 dark:text-slate-400">
-      Feel free to reach out!<br /><br /><strong>Email: mastercoms@tuta.io</strong><br /><br />Or connect on social
-      media with @mastercoms:
-      <ul class="mx-auto text-center">
-        <li>Steam</li>
-        <li>Bluesky: @mcoms.dev</li>
-        <li>Twitter</li>
-        <li>Cohost</li>
-      </ul>
-    </p>
+    <div class="max-w-lg text-center text-xl font-medium mb-0 text-gray-500 dark:text-slate-400">
+      <p class="mb-4">Feel free to reach out!</p>
+      <p class="mt-2"><strong>Email: mastercoms@tuta.io</strong></p>
+      <p class="mt-1">Or connect on social media:</p>
+    </div>
+    <ul class="mx-auto text-center">
+      <li><a class="hover:text-gray-400 dark:hover:text-slate-200" href="https://steamcommunity.com/id/mastercoms/">Steam</a></li>
+      <li><a class="hover:text-gray-400 dark:hover:text-slate-200" href="https://bsky.app/profile/mcoms.dev">Bluesky</a></li>
+    </ul>
   </div>
 </Layout>

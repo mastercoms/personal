@@ -1,9 +1,9 @@
 ---
 import { Icon } from 'astro-icon/components';
-import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
+import ToggleTheme from '~/components/common/ToggleTheme.astro';
 
-import { getHomePermalink, getBlogPermalink, getPermalink } from '~/utils/permalinks';
+import { getBlogPermalink, getHomePermalink, getPermalink } from '~/utils/permalinks';
 
 const links = [
   {
@@ -25,7 +25,7 @@ const links = [
 ];
 
 const social = [
-  { label: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/mastercoms' },
+  { label: 'Bluesky', icon: 'tabler:brand-bluesky', href: 'https://bsky.app/profile/mcoms.dev' },
   { label: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/mastercoms' },
   //{ label: 'RSS', icon: 'tabler:rss', href: getPermalink('/rss.xml') },
 ];
@@ -92,7 +92,7 @@ const social = [
         <li class="md:hidden">
           <a
             class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-            href="https://twitter.com/mastercoms">Twitter</a
+            href="https://bsky.app/profile/mcoms.dev">Bluesky</a
           >
         </li>
         <li class="md:hidden">

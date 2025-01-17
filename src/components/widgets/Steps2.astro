@@ -102,7 +102,7 @@ const {
           <div class="w-full lg:w-1/2 px-0 sm:px-8">
             <ul class="space-y-10">
               {
-                items && items.length
+                !!items && !!items.length
                   ? items.map(({ title: title2, description, icon }, index) => (
                       <li class="flex md:-mx-4">
                         <div class="pr-4 sm:pl-4">

@@ -1,6 +1,7 @@
 ---
 publishDate: 2023-07-17T00:00:00Z
 title: Handy git tricks!
+draft: true
 description: Git can be difficult to use, but with these few tips, you can really enhance your experience!
 excerpt: Learn a few tricks for Git!
 category: Open Source

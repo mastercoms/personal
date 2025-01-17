@@ -9,6 +9,7 @@ export interface Props {
 const { posts } = Astro.props;
 ---
 
+{!posts.length && (<p>No posts yet! Check back soon!</p>)}
 <ul>
   {
     posts.map((post) => (

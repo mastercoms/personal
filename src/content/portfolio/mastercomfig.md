@@ -47,6 +47,26 @@ itself. To date, there have been dozens of changes from mastercomfig included by
 cheater bots that have plagued TF2 for a few years, and performance improvements! And an even a greater set of patches
 submitted at Valve's request is on the way! There's large engine optimizations and huge gameplay fixes being reviewed.
 
+Today, the mastercomfig web app experience continues to expand, with new functionality being introduced every year,
+including comfig huds and comfig quickplay. comfig huds was my first endeavour outside of the basic graphics/performance
+space, and into deeper customization of the game. It was made in response to huds.tf, the most popular HUD customization
+site at the time, shutting down. I made an initial version in great haste, pulling a couple all-nighters to launch it on
+time so players wouldn't have any disruption to finding and downloading HUDs. Over time, it has received new features and
+improvements, mostly to help creators showcase their HUDs better. This includes general UX improvements, but also a trending
+algorithm which has been an area of great excitement in the HUD community. It captures data from a variety of signals to
+determine how healthy the traffic for a HUD is, taking into consideration direct searches, word of mouth, downloads, and more.
+It seems to generate results that users and authors expect, and is used to keep tabs on for new HUD launches as well as
+finding the most popular HUDs.
+
+As for comfig quickplay, this was a tool I decided to ship in response to requests in the community complaining about
+the lack of community server variety, as well as the barrier to entry to playing a proper community pub game of Team Fortress 2.
+It was not easy to make a server finding algorithm which factored in server status and player ping entirely in the browser,
+but after some days of fine tuning, I was really happy with it. The absolutely magical feeling of queuing into a server with
+comfig quickplay, and finding many others who had done the same to create a full and fun match, was something unlike anything
+I had experienced in TF2 in quite some time. Although it has now fell into disuse due to updates and improvements to the game's
+official matchmaking, I still think it serves a great purpose for people who are looking for a more community based experienced
+while casually playing TF2.
+
 ## Experience
 
 To say I learned a lot from this project would be selling it short. Having an opportunity to be this close to Valve

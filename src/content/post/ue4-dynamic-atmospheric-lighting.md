@@ -1,6 +1,7 @@
 ---
 publishDate: 2023-01-08T00:00:00Z
 title: Wrangling with UE4 Dynamic Atmospheric Lighting
+draft: true
 description: How to take your dynamic lighting to the next level in Unreal Engine 4
 excerpt: Custom UE4 dynamic lighting
 category: Unreal Engine

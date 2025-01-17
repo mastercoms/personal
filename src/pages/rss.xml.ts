@@ -1,10 +1,10 @@
 import rss from '@astrojs/rss';
 
-import { SITE, BLOG } from '~/config.mjs';
+import { BLOG, SITE } from '~/config.mjs';
 import { fetchPosts } from '~/utils/blog';
 import { getPermalink } from '~/utils/permalinks';
 
-export const get = async () => {
+export const GET = async () => {
   if (BLOG.disabled) {
     return new Response(null, {
       status: 404,
